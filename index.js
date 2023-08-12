@@ -2,8 +2,12 @@ var input = document.querySelector('input')
 var btn = document.querySelector('#form > button');
 
 btn.addEventListener('click', addList);
+input.addEventListener('keyup', (e)=>{
+    (e.keycode === 13 ? addList(e) : null);
+})
 
 function addList(e){
+    e.preventDefault();
     var notCompleted = document.querySelector('.notcompleted');
     var Completed = document.querySelector('.completed');
 
