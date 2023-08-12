@@ -15,8 +15,11 @@ function addList(e){
     var checkBtn = document.createElement('button');
     var delBtn = document.createElement('button');
 
-    checkBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-    delBtn.innerHTML = ' <i class="fa-solid fa-trash"></i>';
+    checkBtn.innerHTML = '<i class="fa fa-check"></i>';
+    delBtn.innerHTML = ' <i class="fa fa-trash"></i>';
+
+    // checkBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    // delBtn.innerHTML = ' <i class="fa-solid fa-trash"></i>';
 
     if(input.value !==''){
         newLi.textContent = input.value;
