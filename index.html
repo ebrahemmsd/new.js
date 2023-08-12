@@ -3,12 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript</title>
+    <title>To Do List App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>hello world</h1>
-    <h2>dom</h2>
-    <script src="index.js"></script>
-</body>
+    <div id="container">
+        <header id="hd">
+            <h1 id="h1">To_Do List App</h1>
+        </header>
+        <main id="mn">
+            <section id="additems">
+                <h2 id="add">Get Things Done</h2>
+                <form id="form">
+                    <input type="text" id="todo" placeholder="Add a Task">
+                    <button id="add-butt">Submit</button>
+                </form>
+            </section>
+    
+    
+            <section id="err">
+            </section>
+    
+            <section id="list">
+                <h2 id="list-hd">Your To_Do List</h2>
+                <section class="list-cont">
+                
+                    <ol class="notcompleted">
+                        <h3>Not Completed</h3>
+                    </ol>
+                    
+                    
+                    <ol class="completed">
+                        <h3>Completed</h3>
+                    </ol>
+                
+                </section>
+            </section>
+        </main>
+        <footer id="ft">
+            <p id="p">All Rights Reserved@To_Do List App</p>
+        </footer>
+    
+    
+    
+        <script src="index.js"></script>
+        </body>
 </html>

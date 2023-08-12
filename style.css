@@ -1,0 +1,203 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: 
+    "hd"
+    "mn"
+    "ft"
+    ;
+}
+
+#hd {
+    grid-area: hd;
+    background-color: rgb(109, 18, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#h1 {
+    font-size: 80px;
+    color:#fff;
+}
+
+#app-cont {
+    grid-area: mn;
+    background-color: rgb(22, 27, 27);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+#additems{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    align-items: center;
+    justify-content: center;
+}
+#add {
+    font-size: 40px;
+}
+
+#add-butt {
+    font-size: x-large;
+    font-weight: 400;
+    background-color: rgb(109, 18, 255);
+    color: #fff;
+    border-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+    
+}
+#todo {
+    width: 600px;
+    border-radius: 10px;
+}
+#form {
+    display: flex;
+    gap: 15px;
+    height: 40;
+}
+
+#err{
+   height: 70px;
+}
+
+.notcompleted {
+    margin: 5px;
+    padding: 20px;
+}
+.completed {
+    margin: 5px;
+    padding: 20px;
+}
+h3{font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    color:  rgb(109, 18, 255);
+
+}
+ol{
+    list-style: none;
+    counter-reset: my-counter;
+}
+ol li{
+    width: 90vw;
+    padding: 18px;
+    margin: 5px;
+    background: rgb(212, 96, 96);
+    font-size: 22px;
+    counter-increment: my-counter;
+}
+ol.completed li{
+    background: rgb(28, 221, 14);
+}
+ol li::before{
+    content: counter(my-counter);
+    background: rgb(109, 18, 255);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-right: 0.5rem;
+}
+li button{
+   
+    float: right;
+    padding: 5px;
+    font-size: 28px;
+    line-height: 28px;
+    margin-right: 15px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+/* .check, .trash{
+    width: 2rem;
+    height: 2rem;
+} */
+
+
+#list{
+    /* height: 1078.7; */
+    /* flex: 10; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+#list-hd {
+    padding-top: 20px;
+}
+
+/* .list-cont {
+    width: 90vw;
+    height: 40vh;
+    border: 1px solid #fff;
+} */
+
+/* .listUl {
+    list-style: none;
+} */
+
+/* .listUl>li {
+    width: 90vw;
+    height: 5vh;
+    border: 1px solid #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    display: flex;
+}
+
+#one {
+    flex: 1;
+}
+
+#two {
+    flex:1.5;
+}
+
+#three {
+    flex: 1.5;
+}
+
+#four {
+    flex:5;
+}
+#five {
+    flex: 2;
+} */
+
+
+
+
+
+
+
+
+#ft {
+    grid-area: ft;
+    background-color: rgb(109, 18, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#p {
+    color: #fff;
+    font-size: 30px;
+}
+

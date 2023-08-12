@@ -1,16 +1,39 @@
-var test = 40
-console.log('test')
+var input = document.querySelector('input')
+var btn = document.querySelector('#form > button');
 
-// var age = 38
-//  if(age == 40){
-//     console.log("you are a Man!!!!!")
-// }else if(age > 40){
-//     console.log("you are too old")
-//  }
-//  else{
-//     console.log("you still young, best wishes")
-//  }
+btn.addEventListener('click', addList);
 
+function addList(e){
+    var notCompleted = document.querySelector('.notcompleted');
+    var Completed = document.querySelector('.completed');
 
+    var newLi = document.createElement('li');
+    var checkBtn = document.createElement('button');
+    var delBtn = document.createElement('button');
 
+    checkBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    delBtn.innerHTML = ' <i class="fa-solid fa-trash"></i>';
+
+    if(input.value !==''){
+        newLi.textContent = input.value;
+        input.value = '';
+        notCompleted.appendChild(newLi);
+        newLi.appendChild(checkBtn);
+        newLi.appendChild(delBtn)
+
+    }
+    checkBtn.addEventListener('click', function(){
+        var parent = this.parentNode;
+        parent.remove();
+        Completed.appendChild(parent);
+        checkBtn.style.display = 'none';
+    })
+
+    delBtn.addEventListener('click', function(){
+        var parent = this.parentNode;
+        parent.remove();
+        
+    })
+}
+ 
 
